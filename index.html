@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhav Saroha | Portfolio</title>
+
+  <!-- Google Fonts: Space Grotesk for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!--
+    NAVBAR
+    We use a hidden checkbox + label trick ("the checkbox hack") to build
+    a mobile menu toggle WITHOUT any JavaScript. The checkbox holds the
+    open/closed "state", and pure CSS reacts to it with :checked.
+  -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__logo">MS<span class="navbar__logo-dot">.</span></a>
+
+      <input type="checkbox" id="nav-toggle" class="navbar__toggle-input" />
+      <label for="nav-toggle" class="navbar__toggle-label" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navbar__links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="home" class="hero">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">B.Tech CSE Student</p>
+          <h1 class="hero__name">Madhav Saroha</h1>
+          <p class="hero__intro">
+            I build clean, functional interfaces and I'm learning to turn
+            ideas into real, working websites — one project at a time.
+            Currently focused on front-end fundamentals: HTML, CSS, and
+            the logic underneath them.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View My Projects</a>
+            <a href="#contact" class="btn btn--secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- A simple decorative panel — gives the hero visual weight
+             without needing an actual photo -->
+        <div class="hero__panel" aria-hidden="true">
+          <div class="hero__panel-row"><span></span><span></span></div>
+          <div class="hero__panel-row"><span></span><span></span><span></span></div>
+          <div class="hero__panel-row"><span></span></div>
+          <div class="hero__panel-row"><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="section">
+      <div class="section__inner">
+        <p class="section__label">About</p>
+        <h2 class="section__title">A little about me</h2>
+        <p class="about__text">
+          I'm a third-year B.Tech Computer Science student with a growing
+          interest in front-end development and interface design. I like
+          the part of building software where a design turns into
+          something you can actually click, scroll, and interact with.
+          This site is my first step toward a portfolio I'll keep building
+          on as I learn more — each project here reflects something new
+          I picked up along the way.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills" class="section section--alt">
+      <div class="section__inner">
+        <p class="section__label">Skills</p>
+        <h2 class="section__title">What I'm working with</h2>
+
+        <!-- CSS Grid with auto-fit lets this wrap into fewer columns
+             automatically on smaller screens — no media query needed -->
+        <div class="skills__grid">
+
+          <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Semantic structure, accessible markup, forms.</p>
+            <div class="skill-bar"><div class="skill-bar__fill" style="width: 80%;"></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Flexbox, Grid, responsive design, variables.</p>
+            <div class="skill-bar"><div class="skill-bar__fill" style="width: 75%;"></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Structures</h3>
+            <p>Arrays, linked lists, trees, and algorithmic thinking.</p>
+            <div class="skill-bar"><div class="skill-bar__fill" style="width: 60%;"></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Git &amp; GitHub</h3>
+            <p>Version control, commits, and repository management.</p>
+            <div class="skill-bar"><div class="skill-bar__fill" style="width: 55%;"></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects" class="section">
+      <div class="section__inner">
+        <p class="section__label">Projects</p>
+        <h2 class="section__title">Things I've built</h2>
+
+        <div class="projects__grid">
+
+          <article class="project-card">
+            <div class="project-card__accent"></div>
+            <h3>Salesforce Homepage Clone</h3>
+            <p>
+              A pixel-focused recreation of a real Salesforce homepage, built to
+              practice layout structure, typography, and spacing with
+              plain HTML and CSS.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__accent"></div>
+            <h3>Product Landing Page</h3>
+            <p>
+              A responsive landing page for a fictional product, focused
+              on a strong hero section, feature grid, and call-to-action
+              design.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__accent"></div>
+            <h3>Simple Calculator UI</h3>
+            <p>
+              A calculator interface built purely in HTML and CSS,
+              focused on precise Grid layout for the button pad and
+              display.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="section section--alt">
+      <div class="section__inner">
+        <p class="section__label">Contact</p>
+        <h2 class="section__title">Let's talk</h2>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <p>
+              I'm open to internships, collaborations, and beginner-friendly
+              opportunities in front-end development. Feel free to reach out.
+            </p>
+            <ul class="contact__list">
+              <li>Email: madhavsaroha5@gmail.com</li>
+              <li>Location: Punjab, India</li>
+            </ul>
+          </div>
+
+          <!-- This form has no backend yet — it's for layout practice.
+               Later you can connect it to a service like Formspree. -->
+          <form class="contact__form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Say hello..." required></textarea>
+
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; 2026 Madhav Saroha. Built with HTML &amp; CSS.</p>
+      <div class="footer__socials">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
